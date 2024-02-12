@@ -17,7 +17,7 @@ An all-in-one web-app to find tech-related experiences. It will help get aspirin
 - TBA
 
 ## Help
-- please contact me at nahikhan16@gmail.com or linkedin.com/in/nahi-khan
+- please contact me at nahikhan16@gmail.com or [linkedin.com/in/nahi-khan](https://www.linkedin.com/in/nahi-khan)
 
 ## Authors
 - Nahi Khan
