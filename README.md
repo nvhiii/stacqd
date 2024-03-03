@@ -1,35 +1,30 @@
-# stacqd
-Stacqd is a web-app to help tech students and enthusiasts make their resume "stacqd".
+# React + TypeScript + Vite
 
-## Description
-An all-in-one web-app to find tech-related experiences. It will help get aspiring tech enthusiasts "stacqd" resumes via these variety of experiences provided.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Getting Started
-### Dependencies
-- Node.js (v18+)
-- npm
-- local dotenv configuration for api key(s) // number of apis subject to change
+Currently, two official plugins are available:
 
-### Installation
-- TBA
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-### Execution
-- TBA
+## Expanding the ESLint configuration
 
-## Help
-- please contact me at nahikhan16@gmail.com or [linkedin.com/in/nahi-khan](https://www.linkedin.com/in/nahi-khan)
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-## Authors
-- Nahi Khan
+- Configure the top-level `parserOptions` property like this:
 
-## License
-This project is licensed under the MIT license. Please refer to LICENSE.md
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
 
-## Acknowledgements
-- Thank you to my supervisor for CISC 4900, Mohammad Hafizur Rahman Khan
-- Professor Avshalom
-- Professor Chuang
-- Professor Lapid
-
-
-
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
