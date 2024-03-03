@@ -1,9 +1,11 @@
-import ListGroup from "./components/ListGroup";
+import Login from "./components/Login";
 
 function App() {
-
-   return <div><ListGroup /></div>;
-
+  return (
+    <div>
+      <Login />
+    </div>
+  );
 }
 
 export default App;
