@@ -13,7 +13,7 @@ An all-in-one web-app to find tech-related experiences. It will help get aspirin
 - npm
 - React.js + Vite
 - TypeScript
-- Firebase
+- MongoDB
 - Node.js (v18+)
 - local dotenv configuration for api key(s) // number of apis subject to change
 
