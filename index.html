@@ -1,13 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title>Visually Appealing Website</title>
+    <link rel="stylesheet" href="./src/App.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div class="navbar">
+      <div class="left-side">
+        <div class="logo">
+          <a href="index.html" rel="noopener noreferrer">
+            <img src="./src/assets/react.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="right-side">
+        <ul>
+          <li>
+            <a href="about-us.html" rel="noopener noreferrer">About Us</a>
+          </li>
+          <li>Directory</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="welcome-message">
+      <h1>Welcome!</h1>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search Items" />
+    </div>
+
+    <div class="search-results"></div>
+
+    <script src="main.ts"></script>
   </body>
 </html>
