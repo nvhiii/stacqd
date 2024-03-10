@@ -6,10 +6,12 @@ import Signup from "./pages/Signup.tsx";
 import Profile from "./pages/Profile.tsx";
 import BrowseOpportunities from "./pages/BrowseOpportunities.tsx";
 import ViewOpportunity from "./pages/ViewOpportunity.tsx";
+import Header from "./components/Header.tsx";
 
 export default function App() {
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
