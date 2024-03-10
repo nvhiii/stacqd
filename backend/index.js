@@ -28,3 +28,14 @@ app.use("/backend/auth", authRoutes);
 // add other routes here
 // db look up
 // ai summary
+
+// middleware
+app.use((err, _req, res, next) => {
+  const statusCode = err.statusCode || 500;
+  const message = err.message || "Internal server error";
+  return res.status(statusCode).json({
+    success: false,
+    message,
+    statusCode,
+  });
+});
