@@ -29,7 +29,12 @@ An all-in-one web-app to find tech-related experiences. It will help get aspirin
 
 ### Execution
 
-- TBA
+Backend
+
+- npm run dev in root dir for backend functionality testing (will show successful API connectivity + port 3000)
+  Frontend
+- cd client
+- npm run dev (will show index.html via index.tsx and app.tsx on port 5173)
 
 ## Help
 
