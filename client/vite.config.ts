@@ -1,7 +1,15 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-})
+  server: {
+    proxy: {
+      "/backend": {
+        target: "http://localhost:3000", // this is a proxy to bypass CORS policy (TEMPORARY)
+        secure: false, // not https, so
+      },
+    },
+  },
+});
