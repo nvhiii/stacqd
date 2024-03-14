@@ -5,7 +5,7 @@ export default function Header() {
     <div className="bg-slate-200">
       <div className="flex justify-between items-center mx-auto max-w-6xl p-3">
         <Link to="/">
-          <h1 className="font-bold">Header</h1>
+          <h1 className="font-bold">STACQD</h1>
         </Link>
         <ul className="flex gap-2">
           <Link to="/">
