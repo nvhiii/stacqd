@@ -6,6 +6,7 @@ import {
   signInFailure,
 } from "../redux/user/userSlice.js";
 import { useDispatch, useSelector } from "react-redux";
+import OAuth from "../components/OAuth.jsx";
 
 export default function SignIn() {
   // one-state
@@ -26,7 +27,6 @@ export default function SignIn() {
   // we need data to be added to db here, so async fxn
   const handleSubmit = async (e) => {
     e.preventDefault(); // prevents refresh
-
     try {
       //set loading state to true before fetching data
       dispatch(signInStart());
@@ -77,6 +77,7 @@ export default function SignIn() {
         >
           {loading ? "Loading..." : "Sign In"}
         </button>
+        <OAuth />
       </form>
       <div className="flex justify-center gap-2 mt-5">
         <p>Dont have an account?</p>
