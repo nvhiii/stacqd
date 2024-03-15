@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.tsx";
 import About from "./pages/About.tsx";
-import Signin from "./pages/Signin.tsx";
-import Signup from "./pages/Signup.tsx";
+import Signin from "./pages/Signin.jsx";
+import Signup from "./pages/Signup.jsx";
 import Profile from "./pages/Profile.tsx";
 import BrowseOpportunities from "./pages/BrowseOpportunities.tsx";
 import ViewOpportunity from "./pages/ViewOpportunity.tsx";

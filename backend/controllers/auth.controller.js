@@ -30,7 +30,6 @@ export const signin = async (_req, res, next) => {
       return next(errorHandler(401, "Email or password is incorrect"));
 
     // implementation of hashing of private info via token (cookies) after ensuring user is logged in and valid
-
     const token = jwt.sign({ id: validUser._id }, process.env.JWT_SECRET);
 
     // functionality to prevent pwd from being sent to client end
