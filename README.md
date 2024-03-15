@@ -14,7 +14,7 @@ An all-in-one web-app to find tech-related experiences. It will help get aspirin
 - Express.js
 - React.js + Vite
 - Node.js (v18+)
-- local dotenv configuration for sensisitve data
+- local dotenv configuration for sensitive data
 
 ### Installation
 
@@ -36,7 +36,7 @@ Backend
 - cd client
 - npm run dev (will show index.html via index.tsx and app.tsx on port 5173)
 
-## Help
+## Contact Info
 
 - please contact me at nahikhan16@gmail.com
 
