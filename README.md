@@ -14,6 +14,8 @@ An all-in-one web-app to find tech-related experiences. It will help get aspirin
 - Express.js
 - React.js + Vite
 - Node.js (v18+)
+- TypeScript + JS
+- Firebase (OAuth)
 - local dotenv configuration for sensitive data
 
 ### Installation
