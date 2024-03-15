@@ -6,7 +6,8 @@ import Signup from "./pages/Signup.jsx";
 import Profile from "./pages/Profile.tsx";
 import BrowseOpportunities from "./pages/BrowseOpportunities.tsx";
 import ViewOpportunity from "./pages/ViewOpportunity.tsx";
-import Header from "./components/Header.tsx";
+import Header from "./components/Header.jsx";
+import PrivateRoute from "./components/PrivateRoute.jsx";
 
 export default function App() {
   return (
@@ -17,7 +18,9 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/sign-in" element={<Signin />} />
         <Route path="/sign-up" element={<Signup />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/profile" element={<Profile />} />
+        </Route>
         <Route path="/browse-opportunities" element={<BrowseOpportunities />} />
         <Route path="/view-opportunity" element={<ViewOpportunity />} />
       </Routes>
