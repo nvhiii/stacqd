@@ -3,7 +3,7 @@ import Home from "./pages/Home.tsx";
 import About from "./pages/About.tsx";
 import Signin from "./pages/Signin.jsx";
 import Signup from "./pages/Signup.jsx";
-import Profile from "./pages/Profile.tsx";
+import Profile from "./pages/Profile.jsx";
 import BrowseOpportunities from "./pages/BrowseOpportunities.tsx";
 import ViewOpportunity from "./pages/ViewOpportunity.tsx";
 import Header from "./components/Header.jsx";
