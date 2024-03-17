@@ -1,6 +1,6 @@
 import User from "../models/user.model.js";
 import { errorHandler } from "../utils/error.js";
-import bcrypt from "bcryptjs";
+import bcryptjs from "bcryptjs";
 
 export const test = (_req, res) => {
   res.json({
@@ -15,7 +15,7 @@ export const updateUser = async (_req, res, next) => {
   }
   try {
     if (_req.body.password) {
-      _req.body.password = await bcrypt.hash(_req.body.password, 10);
+      _req.body.password = bcryptjs.hashSync(_req.body.password, 10);
     }
     // findByIdAndUpdate is a mongoDB method, finds user id from the POST-ed signin method
     const updatedUser = await User.findByIdAndUpdate(
@@ -26,9 +26,10 @@ export const updateUser = async (_req, res, next) => {
           email: _req.body.email,
           password: _req.body.password,
           pfp: _req.body.profilePicture,
+          // including data this way excludes other extra important info!
         },
       },
-      { new: true }
+      { new: true } // must send this or else u will have old unupdated user
     );
     const { password, ...rest } = updatedUser._doc;
     res.status(200).json(rest);
