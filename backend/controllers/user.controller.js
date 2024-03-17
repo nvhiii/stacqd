@@ -9,30 +9,43 @@ export const test = (_req, res) => {
 };
 
 // update user
-export const updateUser = async (_req, res, next) => {
-  if (_req.user.id !== _req.params.id) {
+export const updateUser = async (req, res, next) => {
+  if (req.user.id !== req.params.id) {
     return next(errorHandler(401, "You can update only your account!"));
   }
   try {
-    if (_req.body.password) {
-      _req.body.password = bcryptjs.hashSync(_req.body.password, 10);
+    if (req.body.password) {
+      req.body.password = bcryptjs.hashSync(req.body.password, 10);
     }
-    // findByIdAndUpdate is a mongoDB method, finds user id from the POST-ed signin method
+
     const updatedUser = await User.findByIdAndUpdate(
-      _req.params.id,
+      req.params.id,
       {
         $set: {
-          username: _req.body.username,
-          email: _req.body.email,
-          password: _req.body.password,
-          pfp: _req.body.profilePicture,
-          // including data this way excludes other extra important info!
+          username: req.body.username,
+          email: req.body.email,
+          password: req.body.password,
+          pfp: req.body.pfp,
         },
       },
-      { new: true } // must send this or else u will have old unupdated user
+      { new: true }
     );
     const { password, ...rest } = updatedUser._doc;
     res.status(200).json(rest);
+  } catch (error) {
+    next(error);
+  }
+};
+
+// delete user fxn;
+
+export const deleteUser = async (req, res, next) => {
+  if (req.user.id !== req.params.id) {
+    return next(errorHandler(401, "You can delete only your account!"));
+  }
+  try {
+    await User.findByIdAndDelete(req.params.id);
+    res.status(200).json("User has been deleted...");
   } catch (error) {
     next(error);
   }
