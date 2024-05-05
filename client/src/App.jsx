@@ -4,10 +4,11 @@ import About from "./pages/About.tsx";
 import Signin from "./pages/Signin.jsx";
 import Signup from "./pages/Signup.jsx";
 import Profile from "./pages/Profile.jsx";
-import BrowseOpportunities from "./pages/BrowseOpportunities.tsx";
-import ViewOpportunity from "./pages/ViewOpportunity.tsx";
 import Header from "./components/Header.jsx";
 import PrivateRoute from "./components/PrivateRoute.jsx";
+import Scraper from "./pages/Scraper.jsx";
+import Summarizer from "./pages/Summarizer.jsx";
+import Opportunities from "./pages/Opportunities.jsx";
 
 export default function App() {
   return (
@@ -21,8 +22,15 @@ export default function App() {
         <Route element={<PrivateRoute />}>
           <Route path="/profile" element={<Profile />} />
         </Route>
-        <Route path="/browse-opportunities" element={<BrowseOpportunities />} />
-        <Route path="/view-opportunity" element={<ViewOpportunity />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/opportunities" element={<Opportunities />} />
+        </Route>
+        <Route element={<PrivateRoute />}>
+          <Route path="/summarizer" element={<Summarizer />} />
+        </Route>
+        <Route element={<PrivateRoute />}>
+          <Route path="/scraper" element={<Scraper />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

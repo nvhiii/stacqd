@@ -12,8 +12,8 @@ export default function Header() {
           <h1 className="font-bold">STACQD</h1>
         </Link>
         <ul className="flex gap-2 items-center">
-          <Link to="/">
-            <li>Home</li>
+          <Link to="/opportunities">
+            <li>Opportunities</li>
           </Link>
           <Link to="/about">
             <li>About</li>
