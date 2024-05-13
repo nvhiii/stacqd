@@ -5,7 +5,7 @@ const Summarizer = () => {
   const [prompt, setPrompt] = useState("");
   const [response, setResponse] = useState("");
 
-  const API_KEY = import.meta.VITE_GEMINI_KEY; // Access API key from .env via global.d.ts
+  const API_KEY = "AIzaSyDTfGqXY-zEoaA9lLlM5maY7oqnYGPT7SI"; // Access API key from .env via global.d.ts
   console.log(API_KEY);
 
   const genAI = new GoogleGenerativeAI(API_KEY);

@@ -13,7 +13,7 @@ export default function Header() {
         </Link>
         <ul className="flex gap-2 items-center">
           <Link to="/opportunities">
-            <li>Opportunities</li>
+            {currentUser ? <li>Opportunities</li> : ""}
           </Link>
           <Link to="/about">
             <li>About</li>
