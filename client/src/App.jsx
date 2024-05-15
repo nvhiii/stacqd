@@ -9,6 +9,7 @@ import PrivateRoute from "./components/PrivateRoute.jsx";
 import Scraper from "./pages/Scraper.jsx";
 import Summarizer from "./pages/Summarizer.jsx";
 import Opportunities from "./pages/Opportunities.jsx";
+import "./index.css";
 
 export default function App() {
   return (
