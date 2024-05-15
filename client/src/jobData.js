@@ -41,7 +41,7 @@ export const payOptions = [
   "$150,000+",
 ];
 
-const perks = [
+export const perks = [
   "Free food",
   "Gym membership",
   "Health insurance",
@@ -54,7 +54,7 @@ const perks = [
   "Team outings",
 ];
 
-const requirements = [
+export const requirements = [
   "Bachelor's degree",
   "Master's degree",
   "3+ years experience",
@@ -77,21 +77,8 @@ function generateRandomJob() {
     requirements: requirements.slice(
       Math.floor(Math.random() * (requirements.length - 3)) + 3
     ), // Select 3-5 random requirements
-    description: generateRandomText(200),
     posted: Math.floor(Math.random() * 30) + 1, // Posted between 1-30 days ago
   };
-}
-
-function generateRandomText(length) {
-  const characters =
-    'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&()*+,-./:;<=>?@[\\]^_`{|}~ ';
-  let randomText = "";
-  for (let i = 0; i < length; i++) {
-    randomText += characters.charAt(
-      Math.floor(Math.random() * characters.length)
-    );
-  }
-  return randomText;
 }
 
 // Generate 100 random jobs and add them to the jobs array

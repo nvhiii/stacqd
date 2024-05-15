@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const Summarizer = () => {
   const [prompt, setPrompt] = useState("");
   const [response, setResponse] = useState("");
 
-  const API_KEY = "AIzaSyDTfGqXY-zEoaA9lLlM5maY7oqnYGPT7SI"; // Access API key from .env via global.d.ts
+  const API_KEY = import.meta.process.env; // Access API key from .env via global.d.ts
   console.log(API_KEY);
 
   const genAI = new GoogleGenerativeAI(API_KEY);
