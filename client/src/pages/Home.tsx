@@ -23,6 +23,16 @@ export default function Home() {
           <img src="../imgs/citadel.svg"></img>
         </div>
       </div>
+      <div className="text-xs pt-5 text-blue-400">
+        <p>
+          Source for slider animation:
+          <span>
+            <a href="https://www.youtube.com/@codingwithrobby" className="link">
+              Robby on YT
+            </a>
+          </span>
+        </p>
+      </div>
     </div>
   );
 }
