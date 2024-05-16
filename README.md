@@ -6,6 +6,8 @@ Stacqd is a web-app to help tech students and enthusiasts make their resume "sta
 
 An all-in-one web-app to find tech-related experiences. It will help get aspiring tech enthusiasts "stacqd" resumes via these variety of experiences provided.
 
+Many thanks to Sahand, who I used to learn how to use MERN: https://www.youtube.com/watch?v=rXvQj-Z0v0s
+
 ## Getting Started
 
 ### Dependencies

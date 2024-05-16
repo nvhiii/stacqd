@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import { jobs, payOptions, perks, requirements } from "../jobData.js";
 
 function Opportunities() {
@@ -10,6 +11,7 @@ function Opportunities() {
   const [requirementsFilter, setRequirementsFilter] = useState([]); // Array for selected requirements
   const [postedFilter, setPostedFilter] = useState(""); // Add state for posted date filter
   const [searchResults, setSearchResults] = useState([]); // Clear search results on every search
+  const { currentUser } = useSelector((state) => state.user);
 
   const handleSearch = () => {
     const filteredJobs = jobs.filter((job) => {
@@ -72,7 +74,9 @@ function Opportunities() {
   return (
     <div className="flex mx-auto px-4 py-16 max-w-2xl">
       <div className="mb-8 max-w-2xl">
-        <h1 className="text-3xl font-bold mb-4">Job Search</h1>
+        <h1 className="text-3xl font-bold mb-4">
+          {currentUser.username}'s Opportunities
+        </h1>
         <div className="flex">
           <div className="flex flex-col">
             <div className="flex flex-col">
